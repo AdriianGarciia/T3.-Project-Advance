@@ -7,7 +7,7 @@
 				<div class="col-md-2">
 				</div>
 				<div class="col-md-8">
-					<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+					<img alt="Bootstrap Image Preview" src="../assets/logo1.png" />
 					<h2 class="text-center text-warning">
 						POLÍTICA DE PRIVACIDAD
 					</h2>
