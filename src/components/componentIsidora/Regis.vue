@@ -63,7 +63,7 @@
 <style>
  /* influencia en las columas que componenlos elementos de la pagina */
 .col-md-4 {
-    background-color: rgba(133, 133, 133, 0.377);
+    background-color:  whitesmoke;
 }
 
 #col-md-4-2 {
