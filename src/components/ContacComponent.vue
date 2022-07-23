@@ -16,7 +16,7 @@
 						<p class="mb-0">
 							Dirección <br>
 						</p>
-						<footer class="blockquote-footer">
+						<footer class="blockquote-footer" style="padding: 15px;">
 							<cite>Colonia Haciendas de Aguascalientes. Calle Hds Carboneras #104</cite>
 						</footer>
 					</blockquote>
@@ -26,7 +26,7 @@
 						<p class="mb-0">
 							Email <br>
 						</p>
-						<footer class="blockquote-footer">
+						<footer class="blockquote-footer" style="padding: 15px;">
 							 <cite>Rosenrot@gmail.com</cite>
 						</footer>
 					</blockquote>
@@ -36,7 +36,7 @@
 						<p class="mb-0">
 							Teléfono <br>
 						</p>
-						<footer class="blockquote-footer">
+						<footer class="blockquote-footer" style="padding: 15px;">
 							<cite>+524493377971</cite>
 						</footer>
 					</blockquote>
@@ -50,7 +50,7 @@
 
 <style>
  .contac{
-  background-color: black;
+  background-color:  rgba(192, 96, 17, 0.459);
   color: white;
   padding-bottom: 100px;
 }

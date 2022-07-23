@@ -10,7 +10,7 @@ import InicioSesion from "../components/ComponentIsidora/InicioSesion.vue";
 <style>
   /* influencia en las columas que componenlos elementos de la pagina */
 .col-md-4 {
-    background-color: rgb(133, 133, 133);
+    background-color: whitesmoke;
 }
 
 #col-md-4-2 {
