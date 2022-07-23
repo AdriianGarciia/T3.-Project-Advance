@@ -50,7 +50,7 @@
 
 <style>
  .contac{
-  background-color: black;
+  background-color:  rgba(192, 96, 17, 0.459);
   color: white;
   padding-bottom: 100px;
 }

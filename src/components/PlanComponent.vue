@@ -17,10 +17,10 @@
 							Tiene un limite de crear 5 categorias 
 						</li>
 						<li class="list-item">
-							20 notas por categoria
+							5 notas por categoria
 						</li>
 						<li class="list-item">
-							con un limite de 200 caracteres
+							Con un limite de 200 caracteres por nota
 						</li>
 					</ul>
 				</div>
@@ -33,10 +33,10 @@
 							Tiene un limite de crear 10 categorias 
 						</li>
 						<li class="list-item">
-							50 notas por categoria
+							10 notas por categoria
 						</li>
 						<li class="list-item">
-							Con un limite de 400 caracteres
+							Con un limite de 500 caracteres por nota
 						</li>
 					</ul>
 				</div>
@@ -46,13 +46,13 @@
 					</h3>
 					<ul>
 						<li class="list-item">
-							Tiene un limite de crear 20 categorias
+							Tiene un limite de crear 15 categorias
 						</li>
 						<li class="list-item">
-							10 notas por categorias
+							20 notas por categorias
 						</li>
 						<li class="list-item">
-							Con un ilimitado número de caracteres
+							Con un maximo de 10,000 caracteres por nota
 						</li>
 					</ul>
 				</div>
@@ -65,7 +65,7 @@
 
 <style>
  .premium{
-  background-color: rgb(155, 153, 153);
+  background-color: white;
   padding-bottom: 100px;
 }
 .planes{
@@ -76,7 +76,7 @@
   float:center;
 }
 .plan1{
-  background: url(../assets/bronce.jpg);
+  background: url(../assets/plata.jpg);
   font-family: cursive;
   color: black;
 }
@@ -86,7 +86,7 @@
   color: black;
 }
 .plan3{
-  background: url(../assets/oro.jpg);
+  background: url(../assets/plata.jpg);
   font-family: cursive;
    color: black;
 }
