@@ -373,6 +373,7 @@
 table {
     float: right;
     margin: 5px;
+    margin-left: 600px;
 }
 table button {
     width: 100px;

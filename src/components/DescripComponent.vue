@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-6 descrip1">
-					<img alt="Bootstrap Image Preview" src="../assets/Descrip1jpeg.jpeg" class="rounded" width="500px"/>
+					<img alt="Bootstrap Image Preview" src="../assets/ejemploregistro.png" class="rounded" width="500px"/>
 				</div>
 				<div class="col-md-6">
 					<dl>
@@ -52,7 +52,7 @@
 					 </dl>
 				</div>
 				<div class="col-md-6">
-          <img alt="Bootstrap Image Preview" src="../assets/Descrip22.jpeg" class="rounded" width="500px"/>
+          <img alt="Bootstrap Image Preview" src="../assets/ejemplocontenido.png" class="rounded" width="500px"/>
 				 </div>
 			 </div>
 		 </div>
@@ -60,7 +60,7 @@
  </div>
 </div>
   <h1 style="text-align: center;">Previsualización</h1>
- <div> <img src="../assets/exnotas.png" alt=""> </div>
+ <div> <img src="../assets/ejemplonotas.png" alt=""> </div>
 </template>
 
 <style>
