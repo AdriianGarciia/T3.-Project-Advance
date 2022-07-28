@@ -7,7 +7,7 @@
 				<div class="col-md-2">
 				</div>
 				<div class="col-md-8">
-					<img alt="Bootstrap Image Preview" src="../assets/logo1.png" />
+					<img alt="Bootstrap Image Preview" src="../../assets/logo1.png" width="70px" style="margin-top: 50px; margin-left: 400px; padding-bottom: 30px;"/>
 					<h2 class="text-center text-warning">
 						POLÍTICA DE PRIVACIDAD
 					</h2>

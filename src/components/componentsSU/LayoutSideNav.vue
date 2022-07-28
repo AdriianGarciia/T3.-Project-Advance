@@ -7,7 +7,7 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Rosenrot 2022</div>
                             <div>
-                                <a href="PoliticasPrivacidad.vue">Politicas de privacidad </a>
+                                <a href="http://localhost:3000/politicas">Politicas de privacidad </a>
                                 &middot;
                             </div>
                         </div>
