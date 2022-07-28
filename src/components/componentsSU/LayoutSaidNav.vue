@@ -48,53 +48,91 @@
                <input type="radio" name="radio" id="radio1">
                <div class="tab1" id="tab1"> 
                  <h1>Todas mis Notas</h1> 
+
                  <!--Todas Mis Notas-->
-                <div class="container-fluid">
-                    <div  class="row">
-                        <div id="Notas" style="background-color: white; margin: 30px; border: 2px solid black" class="col-md-4">
-                            <h2>
-                                Nota 1
-                            </h2>
-                            <p>
-                                Escribe aquí tus notas importantes.
-                            </p>
-                            <button type="button" class="btn btn-info">
-                                Crear Nota
-                            </button> 
-                            <button type="button" class="btn btn-success">
-                                Actualizar
-                            </button>
-                        </div>
-                        <div id="Notas" style="background-color: white; margin: 30px; border: 2px solid black" class="col-md-4">
-                            <h2>
-                                Nota 2
-                            </h2>
-                            <p>
-                                Escribe aqui tus notas importantes.
-                            </p>
-                            <button type="button" class="btn btn-info">
-                                Crear Nota
-                            </button> 
-                            <button type="button" class="btn btn-success">
-                                Actualizar
-                            </button>
-                        </div>
-                        <div id="Notas" style="background-color: white; margin: 30px; border: 2px solid black" class="col-md-4">
-                            <h2>
-                                Nota 3
-                            </h2>
-                            <p>
-                                Escribe aqui tus notas importantes.
-                            </p>
-                            <button type="button" class="btn btn-info">
-                                Crear Nota
-                            </button> 
-                            <button type="button" class="btn btn-success">
-                                Actualizar
-                            </button>
+
+                 <!-- Escribir Notas -->
+                 <div id="CrearNota" class="container-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title">Escribe tu Nota</h5>
+                        <label>Id Nota</label>
+                        <input type="text" placeholder="Id Nota" v-model="inputId">
+                        <label>Titulo de Nota</label>
+                        <input type="text" placeholder="Titulo" v-model="inputTitulo">
+                        <label>Escribe</label>
+                        <textarea name="" id="" cols="30" rows="10" v-model="inputContenido"
+                        placeholder="Escribe Aquí"></textarea>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+                        data-bs-target="#exampleModal" @click="actionAdd(), CrearNotas()">Agregar</button>
+                    </div>
+                </div>
+                 <!-- Tabla de Notas -->
+                 <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Id Nota
+                                        </th>
+                                        <th>
+                                            Titulo
+                                        </th>
+                                        <th>
+                                            Contenido
+                                        </th>
+                                        <th>
+                                            Botones Acción
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(row, idex) in data" :key="row.id" v-bind:class="{ 'table-active' : index % 2 == 0}">
+                                        <td>
+                                            {{ row.IdNota }}
+                                        </td>
+                                        <td>
+                                            {{ row.TituloNota }}
+                                        </td>
+                                        <td>
+                                            {{ row.ContenidoNota}}
+                                        </td>
+                                        <td>
+                                            <!--<button type="button" class="btn btn-success" data-bs-toggle="modal" 
+                                            data-bs-target="#exampleModal" @click="ActualizarNota(index)">
+                                                Actualizar
+                                            </button>-->
+                                            <button type="button" class="btn btn-danger" @click="EliminarNota(index)">
+                                                Eliminar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+                <!--<div id="Notas" style="border: 2px solid black" class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="">Id: </label>
+                            <label for="">usuario: </label>
+                            <h2>
+                                Primera Nota
+                            </h2>
+                            <p>
+                                Primer ejemplo de nota de la página. Ejemplo de como lucen las notas de la página.
+                            </p>
+                            <p>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Actualizar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>         
+                -->
+                <!-- Div Final -->
 
                </div>
 
@@ -104,56 +142,84 @@
                <div class="tab2" id="tab2"> 
                     <h1>Cabiar Color de Fondo</h1>
                     <!--Aqui -->
-                    <div class="container-fluid">
+                    
+                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div id="BotonesFondo" class="col-md-4">
-                                        
-                                        <button type="button" style="color:black; background-color:white" class="btn btn-success">
-                                            White
-                                        </button> 
-                                        <button type="button" style="color:black; background-color:aquamarine" class="btn btn-success">
-                                            Aquamarine
-                                        </button> 
-                                        <button type="button" style="color:black; background-color:beige" class="btn btn-success">
-                                            Beige
-                                        </button>
-                                        <button type="button" style="color:white; background-color:gray" class="btn btn-success">
-                                            Gray
-                                        </button>
-                                    </div>
-                                    <div id="BotonesFondo" class="col-md-4">
-                                        
-                                        <button type="button" style="color:white; background-color:black" class="btn btn-success">
-                                            Black
-                                        </button> 
-                                        <button type="button" style="color:white; background-color:blue" class="btn btn-success">
-                                            Blue
-                                        </button> 
-                                        <button type="button" style="color:white; background-color:blueviolet" class="btn btn-success">
-                                            Violet
-                                        </button>
-                                        <button type="button" style="color:black; background-color:cyan" class="btn btn-success">
-                                            Cyan
-                                        </button>
-                                    </div>
-                                    <div id="BotonesFondo" class="col-md-4">
-                                        
-                                        <button type="button" style="color:white; background-color:brown" class="btn btn-success">
-                                            Brown
-                                        </button> 
-                                        <button type="button" style="color:black; background-color:pink" class="btn btn-success">
-                                            Pink
-                                        </button> 
-                                        <button type="button" style="color:white; background-color:red" class="btn btn-success">
-                                            Red
-                                        </button>
-                                        <button type="button" style="color:black; background-color:orange" class="btn btn-success">
-                                            Orange
-                                        </button>
-                                    </div>
-                                </div>
+                            <div class="col-md-6">
+                                <table class="table">                                    
+                                    <tbody>                                        
+                                        <tr>
+                                            <td>
+                                                <button type="button" style="color:black; background-color:white" class="btn btn-success">
+                                                    White
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:black; background-color:aquamarine" class="btn btn-success">
+                                                    Aqua
+                                                </button> 
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:white; background-color:brown" class="btn btn-success">
+                                                    Brown
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button id="BlackColor" onclick="ColorFondo" type="button" style="color:white; background-color:black" class="btn btn-success">
+                                                    Black
+                                                </button> 
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:white; background-color:gray" class="btn btn-success">
+                                                    Gray
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:black; background-color:beige" class="btn btn-success">
+                                                    Beige
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button" style="color:white; background-color:blue" class="btn btn-success">
+                                                    Blue
+                                                </button> 
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:black; background-color:cyan" class="btn btn-success">
+                                                    Cyan
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:white; background-color:blueviolet" class="btn btn-success">
+                                                    Violet
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button" style="color:white; background-color:red" class="btn btn-success">
+                                                    Red
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:black; background-color:pink" class="btn btn-success">
+                                                    Pink
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button type="button" style="color:black; background-color:orange" class="btn btn-success">
+                                                    Orange
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
                             </div>
                         </div>
                     </div>
@@ -273,12 +339,13 @@
 
 /*AQUI EL CSS DE TODAS MIS NOTAS Y CAMBIO DE COLOR DE FONDO*/ 
 
-.col-md-4 button {
+/*AQUI EL CSS DE TODAS MIS NOTAS Y CAMBIO DE COLOR DE FONDO*/ 
+
+.col-md-6 button {
     width: 100px;
     margin: 10px;
     border-radius: 10px;
 }
-
 #BotonesFondo {
     padding: 50px;
     width: 800px;
@@ -287,17 +354,261 @@
     margin-bottom: -50px;
 }
 
+/* Mis notas y cambios para las notas escritas */
+
 #Notas {
-    padding: -10px;
-    width: 500px;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-bottom: -30px;
+    width: 300px;
+    margin: 10px;
+    float: left;
     display: flex;
 }
-
-#Notas h2, p {
+#Notas label {
     margin: 10px;
+}
+#Notas button {
+    width: 100px;
+    margin: 5px;
+}
+
+table {
+    float: right;
+    margin: 5px;
+}
+table button {
+    width: 100px;
+    margin: 5px;
+}
+
+#CrearNota {
+    float: left;
+    border: 2px solid red;
+    margin: 1px;
+    width: 345px;
+}
+#CrearNota button {
+    width: 100px;
+    margin: 5px;
+}
+#CrearNota input {
+    width: 258px;
+    margin: 1px;
+    border: 1px solid blue;
+}
+#CrearNota textarea {
+    border: 1px solid blue;
+    width: 350pxs;
+    height: 100px;
 }
 
 </style>
+
+
+<script>
+    export default {
+        data() {
+            return {
+                /*data : [
+                    {ContactId: 1, Name: "Veronica", Phone: "4494656742", Date: "12/10/2022", Status: "No Activo"},
+                    {ContactId: 2, Name: "Laura", Phone: "4497852852", Date: "11/10/2022", Status: "Activo"},
+                    {ContactId: 3, Name: "Miguel", Phone: "4495236963", Date: "13/10/2022", Status: "No Activo"},
+                    {ContactId: 4, Name: "Manuel", Phone: "4499632789", Date: "12/09/2022", Status: "Activo"},
+                    {ContactId: 5, Name: "Fernan", Phone: "4497412321", Date: "08/10/2022", Status: "No Activo"}
+                ],*/
+                data : [],
+                inputId : "",
+                inputTitulo : "",
+                inputContenido : "",
+                action : ""
+                /*,
+                action : "",
+                index : ""*/
+            }
+        },
+        methods: {
+            actionAdd() {
+                this.action = "Add";
+            },
+            select(id, index) {
+                console.log("Rowid = " + id);
+                console.log("Index = " + index);
+                console.log(this.data[index].TituloNota);
+                this.data[index].TituloNota = "Modificado";
+                console.log(this.data[index].TituloNota);
+            },
+            details(index) {
+                const headers = { "Content-Type": "application/json" };
+                fetch("http://localhost/Backend/Api/read_one.php?ContactId="+ parseInt(this.data[index].IdNota))
+                    .then(async response => {
+                        const res = await response.json();
+                        console.log(res);
+                        if(!response.OK) {
+                            const error = (res && res.message) || response.StatusText;
+                            return Proimise.reject(error);
+                        } else {
+                            console.log(response);
+                        }
+                    })
+                    .catch(error => {
+                        this.errorMessage = error;
+                        console.error("Ocurrio un error: ", error);
+                    });
+            },
+            /*fillTable(){
+                const headers = { "Content-Type": "application/json" };
+                fetch("http://localhost/Backend/Api/read.php")
+                    .then(async response => {
+                        const res = await response.json();
+                        console.log(res);
+
+                        if(!response.OK) {
+                            const error = (res && res.message) || response.StatusText;
+                            return Proimise.reject(error);
+                        } else {
+                            this.data = res.body;
+                        }
+                    })
+                    .catch(error => {
+                        this.errorMessage = error;
+                        console.error("Ocurrio un error: ", error);
+                    })
+            },*/
+            EliminarNota(index) {                
+                const requestOptions = {
+                    method: "DELETE",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ IdNota: parseInt(this.data[index].IdNota)})
+                };
+                fetch("http://localhost/ProyectoFinalBackend/Api/Delete.php", requestOptions)
+                    .then(async response => {
+                        const data = await response.json();
+
+                        if (data != "OK") {
+                            const error = response.StatusText;
+                            return Proimise.reject(error);
+                        } else {
+                            console.log(response.body);
+                        }
+                    })
+                    .catch(error => {
+                        this.errorMessage = error;
+                        console.error("Ocurrio un error: ", error);
+                    });
+                    alert("Eliminado");
+
+            },
+            create() {
+                //this.data.push({ContactId: 13, Name: "Lily", Phone: "449745412", Date: "18/10/2022", Status: "Activo"});
+                this.data.push({IdNota: document.getElemetById("IdNota").value, 
+                TituloNota: document.getElemetById("TituloNota").value, 
+                ContenidoNota: document.getElemetById("ContenidoNota").value});
+                
+            },
+            createNew() {
+                this.data.push({IdNota: this.inputId, TituloNota: this.inputTitulo, ContenidoNota: this.inputContenido});
+            },
+            CrearNotas() {
+                if (this.inputId != "" && this.inputTitulo != "" && this.inputContenido != "") {
+                    if (this.action == "Add") {
+                        const requestOptions = {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({TituloNota: this.inputTitulo, ContenidoNota: this.inputContenido})
+                        };
+                        fetch("http://localhost/ProyectoFinalBackend/Api/Create.php", requestOptions)
+                            .then(async response => {
+                                const data = await response.json();
+
+                                if (data != "OK") {
+                                    const error = response.StatusText;
+                                    return Proimise.reject(error);
+                                } else {
+                                    console.log(response.body);
+                                }
+                            })
+                            .catch(error => {
+                                this.errorMessage = error;
+                                console.error("Ocurrio un error: ", error);
+                            });
+                            alert("Agregado");
+                            this.data.push({IdNota: this.inputId, TituloNota: this.inputTitulo, ContenidoNota: this.inputContenido});
+                            this.inputId="";
+                            this.inputTitulo="";
+                            this.inputContenido="";
+                    } else if (this.action == "update") {
+                        const requestOptions = {
+                            method: "PUT",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({IdNota: parseInt(this.inputId), TituloNota: this.inputTitulo, ContenidoNota: this.inputContenido})
+                        };
+                        fetch("http://localhost/ProyectoFinalBackend/Api/Update.php", requestOptions)
+                            .then(async response => {
+                                const data = await response.json();
+
+                                if(data != "OK") {
+                                    const error = response.StatusText;
+                                    return Proimise.reject(error);
+                                } else {
+                                    console.log(response.body);
+                                }
+                            })
+                            .catch(error => {
+                                this.errorMessage = error;
+                                console.error("Ocurrio un error: ", error);
+                            });
+                            alert("Actualizado");                            
+                    }
+                    /*this.data.push({id: this.inputID, contact: this.inputContact, phone: this.inputPhone, date: this.inputDate, status: this.inputStatus});
+                    this.inputID="";
+                    this.inputContact="";
+                    this.inputPhone="";
+                    this.inputDate="";
+                    this.inputStatus="";*/
+                } else {
+                    alert("Todos los campos son requeridos");
+                }
+                
+            },
+            updateRow(index) {
+                this.action = "update";
+                this.inputId = this.data[index].IdNota;
+                this.inputTitulo = this.data[index].TituloNota;
+                this.inputContenido = this.data[index].ContenidoNota;
+            },
+            clearVar() {
+                this.inputId = "";
+                this.inputTitulo = "";
+                this.inputContenido = "";
+            }
+        },           
+        created() {
+            const headers = { "Content-Type": "application/json" };
+            fetch("http://localhost/ProyectoFinalBackend/Api/Read.php")
+                .then(async response => {
+                    const res = await response.json();
+                    console.log(res);
+                    if (!response.OK) {
+                        const error = (res && res.message) || response.StatusText;
+                        return Proimise.reject(error);
+                    } else {
+                        this.data = res.body;
+                    }
+                })
+                .catch(error => {
+                    this.errorMessage = error;
+                    console.error("Ocurrio un error: ", error);
+                });
+                
+        },
+        
+        props: {
+            title: String 
+        }
+        /*,
+        created() {
+            const header = { "Content-Type": "application/json"};
+            fetch("https:/regres.in/api/products/3")
+                .then(async response => await response.json())
+                .then(data => (console.log(data)));
+        }*/
+    }
+</script>
