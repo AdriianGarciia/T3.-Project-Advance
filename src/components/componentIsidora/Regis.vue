@@ -49,7 +49,7 @@
                                 <a href="http://localhost:3000/contenido" style="color: white;">Registrarse</a>
                             </button>
 
-                            <button type="button" class="btn btn-link">¿Ya tienes una cuenta?</button>
+                            <button type="button" class="btn btn-link"  href="http://localhost:3000/login">¿Ya tienes una cuenta?</button>
                         </form>
                     </div>
                     <div class="col-md-4">
