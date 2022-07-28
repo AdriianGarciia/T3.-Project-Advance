@@ -4,7 +4,7 @@
 <template>
 
 
- <div class="container-fluid">
+ <div class="container-fluid" style="background-color: whitesmoke;">
         <div class="row">
             <div class="col-md-12">
                 <!-- menú superior decorativo o de acción -->
@@ -67,6 +67,8 @@
  /* influencia en las columas que componenlos elementos de la pagina */
 .col-md-4 {
     background-color:  whitesmoke;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 #col-md-4-2 {
