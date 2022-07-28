@@ -1,4 +1,9 @@
+
+
+
 <template>
+
+
  <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -14,34 +19,27 @@
                             REGISTRATE
                         </h3>
                         
-                        <form role="form">
+                        <form role="form" action="">
                             <div class="form-group">
                                  
                                 <label for="exampleInputEmail1">
                                     Nombre de Usuario
                                 </label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" />
+                                <input type="text" name="" class="form-control" id="exampleInputEmail1" />
                             </div>
                             <div class="form-group">
                                  
                                 <label for="exampleInputPassword1">
                                     Correo Electronico
                                 </label>
-                                <input type="email" class="form-control" id="exampleInputPassword1" />
+                                <input type="email" name="" class="form-control" id="exampleInputPassword1" />
                             </div>
                             <div class="form-group">
                                  
                                 <label for="exampleInputEmail1">
                                     Contraseña
                                 </label>
-                                <input type="password" class="form-control" id="exampleInputEmail1" />
-                            </div>
-                            <div class="form-group">
-                                 
-                                <label for="exampleInputPassword1">
-                                    Confirmar Contraseña
-                                </label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                                <input type="password" name="" class="form-control" id="exampleInputEmail1" />
                             </div>
                             
                             <!-- Botones de acción -->
@@ -49,7 +47,7 @@
                                 <a href="http://localhost:3000/contenido" style="color: white;">Registrarse</a>
                             </button>
 
-                            <button type="button" class="btn btn-link">¿Ya tienes una cuenta?</button>
+                            <button type="button" class="btn btn-link"  href="http://localhost:3000/login">¿Ya tienes una cuenta?</button>
                         </form>
                     </div>
                     <div class="col-md-4">
@@ -58,7 +56,12 @@
             </div>
         </div>
     </div>
+
+
+
 </template>
+
+
 
 <style>
  /* influencia en las columas que componenlos elementos de la pagina */
