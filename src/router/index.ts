@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import RegistroVue from '@/views/Registro.vue'
-import politicas from '../components/componentsSU/PoliticasPrivacidad.vue'
+import politicas from '../components/componentsSU/PoliticasPrivacidad.vue'  
 
 
 const router = createRouter({
